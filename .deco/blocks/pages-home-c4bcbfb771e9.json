@@ -48,17 +48,12 @@
       "title": "Featured Products",
       "cta": "/mono",
       "products": {
-        "__resolveType": "shopify/loaders/ProductList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
           "sort": "",
           "count": 12,
-          "query": "a"
-        },
-        "filters": {
-          "tags": [],
-          "productTypes": [],
-          "productVendors": [],
-          "variantOptions": []
+          "fuzzy": "automatic",
+          "query": "camiseta"
         }
       }
     },
@@ -118,51 +113,36 @@
       "tabs": [
         {
           "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
+            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
             "props": {
               "sort": "",
               "query": "hat and bag",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
+              "count": 10,
+              "fuzzy": "automatic"
             }
           },
           "title": "Accessories"
         },
         {
           "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
+            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
             "props": {
               "sort": "",
               "query": "Shirts",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
+              "count": 10,
+              "fuzzy": "automatic"
             }
           },
           "title": "Fashion"
         },
         {
           "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
+            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
             "props": {
               "sort": "",
               "query": "stickers",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
+              "count": 10,
+              "fuzzy": "automatic"
             }
           },
           "title": "Stickers"
