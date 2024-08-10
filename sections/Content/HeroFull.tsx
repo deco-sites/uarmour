@@ -37,7 +37,7 @@ export default function HeroFull({
 }: Props) {
   return (
     <div>
-      <div class="mx-auto flex flex-col items-center lg:pt-[30px] mb-[30px] lg:mb-[94px]">
+      <div class="mx-auto flex flex-col items-center lg:pt-[30px]">
         <div
           class={`flex w-full relative items-center`}
         >

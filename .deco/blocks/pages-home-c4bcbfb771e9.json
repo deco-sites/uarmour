@@ -58,8 +58,17 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Featured Products",
-      "cta": "/mono",
+      "title": "<p style=\"color: #000; font-weight: 600; font-size: .75rem; margin-bottom: -1rem; line-height: 6; text-transform: none;\" data-mce-style=\"color: #000; font-weight: 600; font-size: .75rem; margin-bottom: -1rem; line-height: 6; text-transform: none;\">'Curry 11'</p><p>FUTURE WOLF</p>",
+      "cta": {
+        "0": "/",
+        "1": "m",
+        "2": "o",
+        "3": "n",
+        "4": "o",
+        "text": "Compre a Coleção",
+        "variant": "Normal",
+        "href": "/"
+      },
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
@@ -68,7 +77,8 @@
           "collection": "839",
           "similars": true
         }
-      }
+      },
+      "description": "<p>O futuro chegou para o Young Wolf e toda a geração. Voe como Canon Curry e faça o seu jogo nas quadras.</p>"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -103,8 +113,17 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Featured Products",
-      "cta": "/mono",
+      "title": "<p style=\"color: #000; font-weight: 600; font-size: .75rem; margin-bottom: -1rem; line-height: 6;text-transform: none;\" data-mce-style=\"color: #000; font-weight: 600; font-size: .75rem; margin-bottom: -1rem; line-height: 1.5;\">'Curry Brand Gear'</p><p>PARA MIM,<br>É UMA VIRADA DE JOGO</p>",
+      "cta": {
+        "0": "/",
+        "1": "m",
+        "2": "o",
+        "3": "n",
+        "4": "o",
+        "text": "Compre Basquete",
+        "variant": "Normal",
+        "href": "/"
+      },
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
@@ -113,7 +132,8 @@
           "collection": "840",
           "similars": true
         }
-      }
+      },
+      "description": "<p>Tudo o que coloco meu nome tem que ser bom,<br>tem que ajudar a jogar e tem que apoiar nossa missão de virar o jogo para sempre.</p>"
     },
     {
       "__resolveType": "Footer"

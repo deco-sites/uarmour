@@ -17,8 +17,8 @@ interface Banner {
 
 interface Props {
   /**
-   * @maxItems 4
-   * @minItems 4
+   * @maxItems 2
+   * @minItems 2
    */
   banners?: Banner[];
 }
@@ -27,7 +27,7 @@ export default function Gallery({
   banners = [],
 }: Props) {
   return (
-    <div class="flex p-[2rem] gap-[2rem] lg:gap-[3rem] justify-center overflow-scroll lg:overflow-hidden w-full mt-[2rem] mb-[4rem]">
+    <div class="flex p-[2rem] gap-[2rem] lg:gap-[3rem] lg:justify-center overflow-scroll lg:overflow-hidden w-full mt-[2rem] mb-[4rem]">
       {
         banners.map(banner => (
           <div class="lg:w-[42%]">

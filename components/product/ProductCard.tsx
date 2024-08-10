@@ -11,6 +11,7 @@ import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
 import { Ring } from "./ProductVariantSelector.tsx";
 import { useId } from "../../sdk/useId.ts";
+import Icon from "../ui/Icon.tsx";
 
 interface Props {
   product: Product;
@@ -39,20 +40,23 @@ function ProductCard({
 }: Props) {
   const id = useId();
 
-  const { url, image: images, offers, isVariantOf } = product;
+  const { url, image: images, offers, isVariantOf, variationColors } = product;
   const hasVariant = isVariantOf?.hasVariant ?? [];
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
-  const { listPrice, price, seller = "1", availability } = useOffer(offers);
+  const { listPrice, price, seller = "1", availability, installments } =
+    useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
-  const firstSkuVariations = Object.entries(possibilities)[0];
-  const variants = Object.entries(firstSkuVariations[1] ?? {});
+  // const firstSkuVariations = Object.entries(possibilities)[0];
+  // const variants = Object.entries(firstSkuVariations[1] ?? {});
+  const secondSkuVariations = Object.entries(possibilities)[1];
+  const secondVariants = Object.entries(secondSkuVariations[1] ?? {}); // <-
   const relativeUrl = relative(url);
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
+  // const percent = listPrice && price
+  //   ? Math.round(((listPrice - price) / listPrice) * 100)
+  //   : 0;
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
@@ -77,7 +81,6 @@ function ProductCard({
         class={clx(
           "relative bg-base-200",
           "rounded border border-transparent",
-          "group-hover:border-primary",
         )}
         style={{ aspectRatio: ASPECT_RATIO }}
       >
@@ -88,7 +91,7 @@ function ProductCard({
           class={clx(
             "absolute top-0 left-0",
             "grid grid-cols-1 grid-rows-1",
-            "w-full",
+            "w-full bg-[#f2f2f2] rounded-[.5rem] ",
             !inStock && "opacity-70",
           )}
         >
@@ -97,11 +100,18 @@ function ProductCard({
             alt={front.alternateName}
             width={WIDTH}
             height={HEIGHT}
-            style={{ aspectRatio: ASPECT_RATIO }}
+            style={{
+              aspectRatio: ASPECT_RATIO,
+              mixBlendMode: "multiply",
+              contentVisibility: "auto",
+              backgroundSize: "contain",
+              backgroundPosition: "50%",
+              backgroundRepeat: "no-repeat",
+            }}
             class={clx(
               "object-cover",
               "rounded w-full",
-              "col-span-full row-span-full",
+              "transition-opacity duration-[.4s] ease-in-out col-span-full row-span-full group-hover:opacity-0",
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             preload={preload}
@@ -113,66 +123,95 @@ function ProductCard({
             alt={back?.alternateName ?? front.alternateName}
             width={WIDTH}
             height={HEIGHT}
-            style={{ aspectRatio: ASPECT_RATIO }}
+            style={{
+              aspectRatio: ASPECT_RATIO,
+              mixBlendMode: "multiply",
+              contentVisibility: "auto",
+              backgroundSize: "contain",
+              backgroundPosition: "50%",
+              backgroundRepeat: "no-repeat",
+            }}
             class={clx(
               "object-cover",
               "rounded w-full",
               "col-span-full row-span-full",
-              "transition-opacity opacity-0 lg:group-hover:opacity-100",
+              "transition-opacity duration-[.4s] ease-in-out opacity-0 z-[-1] lg:z-[1] lg:group-hover:opacity-100",
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             loading="lazy"
             decoding="async"
           />
         </a>
-
-        {/* Wishlist button */}
-        <div class="absolute top-0 left-0 w-full flex items-center justify-between">
-          {/* Notify Me */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-error bg-opacity-15 text-center rounded-badge px-2 py-1",
-              inStock && "opacity-0",
-            )}
-          >
-            Notify me
-          </span>
-
-          {/* Discounts */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
-              (percent < 1 || !inStock) && "opacity-0",
-            )}
-          >
-            {percent} % off
-          </span>
-        </div>
-
-        <div class="absolute bottom-0 right-0">
-          <WishlistButton item={item} variant="icon" />
+        <div class="hidden lg:flex group/button w-[2.5rem] hover:w-full absolute left-[.625rem] bottom-[.625rem] z-[2]">
+          
         </div>
       </figure>
 
-      <a href={relativeUrl} class="pt-5">
-        <span class="font-medium">
-          {title}
-        </span>
+      <a href={relativeUrl} class="mt-[.625rem]">
+        <div
+          class="grid"
+          style={{ gridTemplateColumns: "1fr minmax(auto,3.75rem)" }}
+        >
+          <span
+            style={{
+              "-webkit-line-clamp": "2",
+              "-webkit-box-orient": "vertical",
+              display: "-webkit-box",
+            }}
+            class="font-medium font-roboto text-[.875rem] leading-[1.125rem] overflow-hidden text-ellipsis	text-[#1d1d1d] "
+          >
+            {title}
+          </span>
+          <WishlistButton item={item} variant="icon" />
+        </div>
 
-        <div class="flex gap-2 pt-2">
-          {listPrice && (
+        <div class="flex flex-col gap-[.75rem] pt-[.75rem]">
+          {
+            /* {listPrice && (
             <span class="line-through font-normal text-gray-400">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
-          )}
-          <span class="font-medium text-base-300">
+          )} */
+          }
+          <span class="font-bold text-[#001489] text-[.875rem] leading-[.875rem] font-roboto">
             {formatPrice(price, offers?.priceCurrency)}
+          </span>
+          <span class="text-[#707070] text-[.875rem] leading-[.875rem] font-roboto">
+            {installments}
+          </span>
+          <span class="text-[#707070] text-[.875rem] leading-[.875rem] font-roboto">
+            {variationColors && variationColors.length > 0 &&
+              variationColors.length + (variationColors.length > 1
+                  ? " cores disponíveis"
+                  : " cor disponível")}
           </span>
         </div>
       </a>
+      <ul class="hidden variations lg:flex opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-[.4s] mt-[.625rem] overflow-hidden overflow-x-auto p-[.25rem] min-h-[50px]">
+        {variationColors && variationColors.length > 0 &&
+          variationColors.map((variation) => (
+            <li class="mr-[.1875rem] min-w-[45px]">
+              <a
+                class="w-full h-full min-w-[45px]"
+                href={"/" + variation.linkText + "/p"}
+              >
+                <Image
+                  src={variation.items[0].images[0].imageUrl}
+                  alt={front.alternateName}
+                  width={45}
+                  height={45}
+                  class={""}
+                  loading={"lazy"}
+                  decoding="async"
+                />
+              </a>
+            </li>
+          ))}
+      </ul>
 
       {/* SKU Selector */}
-      {variants.length > 1 && (
+      {
+        /* {variants.length > 1 && (
         <ul class="flex items-center justify-start gap-2 pt-4 pb-1 pl-1 overflow-x-auto">
           {variants.map(([value, link]) => [value, relative(link)] as const)
             .map(([value, link]) => (
@@ -189,11 +228,13 @@ function ProductCard({
               </li>
             ))}
         </ul>
-      )}
+      )} */
+      }
 
       <div class="flex-grow" />
 
-      <div>
+      {
+        /* <div>
         {inStock
           ? (
             <AddToCartButton
@@ -223,7 +264,8 @@ function ProductCard({
               Sold out
             </a>
           )}
-      </div>
+      </div> */
+      }
     </div>
   );
 }
