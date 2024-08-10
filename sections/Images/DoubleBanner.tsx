@@ -27,7 +27,7 @@ export default function Gallery({
   banners = [],
 }: Props) {
   return (
-    <div class="flex p-[2rem] gap-[2rem] lg:gap-[3rem] justify-center overflow-scroll w-full mt-[2rem] mb-[4rem]">
+    <div class="flex p-[2rem] gap-[2rem] lg:gap-[3rem] justify-center overflow-scroll lg:overflow-hidden w-full mt-[2rem] mb-[4rem]">
       {
         banners.map(banner => (
           <div class="lg:w-[42%]">
