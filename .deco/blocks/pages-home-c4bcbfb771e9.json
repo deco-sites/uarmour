@@ -73,6 +73,28 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Images/DoubleBanner.tsx",
+        "banners": [
+          {
+            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/145a9c2e-ee95-4bd1-8111-a992fbe3a886",
+            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/cabd6752-f202-4416-9273-9b7acb31b027",
+            "title": "Curry 11 Girl Dad",
+            "description": "Compre Agora",
+            "href": "/"
+          },
+          {
+            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/5a170932-dcb0-4f25-8b0f-c68d12761482",
+            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/9ce4a2b7-f084-4ed5-84f7-b9f1b5c24a2e",
+            "description": "Compre Agora",
+            "title": "Curry 11 Bruce Lee Wind",
+            "href": "/"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Content/HeroFull.tsx",
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/c43ee5c4-b46d-41c5-a2eb-f810e63f63b9",
         "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/0f3a8c68-1d77-4666-9579-9c7a03d4d38d",
