@@ -63,7 +63,7 @@ export default function HeroFlats({
             />
           )}
           <div
-            class={`hidden lg:flex px-[5rem] pb-[5rem] lg:w-[40%] space-y-4 gap-4 ${
+            class={`hidden lg:flex lg:flex-col px-[5rem] pb-[5rem] lg:w-[40%] space-y-4 gap-4 ${
               image ? "lg:w-1/2" : "flex flex-col items-center justify-end"
             }`}
           >
