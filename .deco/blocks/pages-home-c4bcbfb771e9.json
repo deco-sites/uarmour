@@ -22,6 +22,34 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Content/MobileCards.tsx",
+        "cards": [
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/d4be25c3-2978-44b8-9775-9b00b76f2896",
+            "description": "Masculino",
+            "href": "/"
+          },
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/4025c69b-c9fe-4a1c-8de7-824454b7aa08",
+            "description": "Feminino",
+            "href": "/"
+          },
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/0a20b530-9708-4361-9b70-269eeaf08aae",
+            "description": "Infantil",
+            "href": "/"
+          },
+          {
+            "description": "Calçados",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/ee76f8ec-4255-4122-bca4-3d733ce93233",
+            "href": "/"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Content/HeroFull.tsx",
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/b6ee6d2f-4a81-4e43-a7b5-30dc7641ef61",
         "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/aa18eb20-dddf-439e-973e-0000b249e675",
