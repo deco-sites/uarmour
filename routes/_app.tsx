@@ -28,6 +28,54 @@ export default defineApp(async (_req, ctx) => {
           rel="stylesheet"
         />
 
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            @font-face {
+              font-family: 'neue-plak';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: url(${
+              asset("/fonts/neue-plak-regular.woff2")
+            }) format('woff2');
+            }
+            @font-face {
+              font-family: 'neue-plak';
+              font-style: normal;
+              font-weight: 600;
+              font-display: swap;
+              src: url(${
+              asset("/fonts/neue-plak-semibold.woff2")
+            }) format('woff2');
+            }
+            @font-face {
+              font-family: 'neue-plak';
+              font-style: normal;
+              font-weight: 700;
+              font-display: swap;
+              src: url(${asset("/fonts/neue-plak-bold.woff2")}) format('woff2');
+            }
+            @font-face {
+              font-family: 'neue-plak';
+              font-style: normal;
+              font-weight: 900;
+              font-display: swap;
+              src: url(${
+              asset("/fonts/neue-plak-black.woff2")
+            }) format('woff2');
+            }
+            @font-face {
+              font-family: 'inter';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: url(${asset("/fonts/inter.woff2")}) format('woff2');
+            }
+          `,
+          }}
+        />
+
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
       </Head>

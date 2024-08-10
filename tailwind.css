@@ -6,7 +6,10 @@
 
   /* Allow changing font family via CMS */
   html {
-    font-family: var(--font-family);
+    font-family: 'neue-plak', sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
   }
 
   /** Remove default styles from input[type=number] */

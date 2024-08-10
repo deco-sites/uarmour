@@ -5,43 +5,27 @@
       "__resolveType": "Header"
     },
     {
-      "__resolveType": "site/sections/Images/Carousel.tsx",
-      "images": [
+      "__resolveType": "site/sections/Content/Hero.tsx",
+      "title": "<p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--whiteTitle\">CURRY</p><p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--whiteLink\"><a class=\"vtex-rich-text-0-x-link vtex-rich-text-0-x-link--whiteLink\" href=\"https://www.underarmour.com.br/curry/masculino?_q=curry&amp;fuzzy=0&amp;initialMap=ft&amp;initialQuery=curry&amp;map=ft,genero&amp;operator=and\" data-mce-href=\"https://www.underarmour.com.br/curry/masculino?_q=curry&amp;fuzzy=0&amp;initialMap=ft&amp;initialQuery=curry&amp;map=ft,genero&amp;operator=and\" data-mce-selected=\"inline-boundary\">Masculino﻿</a></p><p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--whiteLink\"><a class=\"vtex-rich-text-0-x-link vtex-rich-text-0-x-link--whiteLink\" href=\"https://www.underarmour.com.br/feminino/esportes/basquete\" data-mce-href=\"https://www.underarmour.com.br/feminino/esportes/basquete\">Feminino</a></p><p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--whiteLink\"><a class=\"vtex-rich-text-0-x-link vtex-rich-text-0-x-link--whiteLink\" href=\"https://www.underarmour.com.br/curry/infantil?_q=curry&amp;fuzzy=0&amp;initialMap=ft&amp;initialQuery=curry&amp;map=ft,genero&amp;operator=and\" data-mce-href=\"https://www.underarmour.com.br/curry/infantil?_q=curry&amp;fuzzy=0&amp;initialMap=ft&amp;initialQuery=curry&amp;map=ft,genero&amp;operator=and\">Infantil</a></p><p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--whiteLink\"><a class=\"vtex-rich-text-0-x-link vtex-rich-text-0-x-link--whiteLink\" href=\"https://www.underarmour.com.br/calcados/curry?_q=curry&amp;fuzzy=0&amp;initialMap=ft&amp;initialQuery=curry&amp;map=category-2,ft&amp;operator=and\" data-mce-href=\"https://www.underarmour.com.br/calcados/curry?_q=curry&amp;fuzzy=0&amp;initialMap=ft&amp;initialQuery=curry&amp;map=category-2,ft&amp;operator=and\">Calçados</a></p>",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/fc5aa31a-c877-4c8c-873a-5763f33e06cd",
+      "description": " ",
+      "placement": "right",
+      "cta": [
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/5b022a01-ba88-46fe-86ae-93ae644605b7",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/88b2ad41-be6d-4640-b9fe-c58942362f0f",
-          "alt": "Shoes",
-          "action": {
-            "title": "Skate into Adventure",
-            "subTitle": "Top-quality roller skate shoes for all levels. ",
-            "href": "#",
-            "label": "Grab Yours Now!"
-          }
-        },
-        {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d26304f4-355b-48d0-b649-e24b9cbf0ded",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/47a4d85a-1150-4e5d-abc2-5c642445ff12",
-          "alt": "Men",
-          "action": {
-            "title": "Discover Fresh Looks",
-            "subTitle": "Modern men's clothing and accessories.",
-            "href": "#",
-            "label": "Shop the Collection"
-          }
-        },
-        {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/1226ef79-c7e0-403c-b716-b6b9af3f2936",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f7ea4cbe-7498-4e64-9205-c741753edfcc",
-          "action": {
-            "label": "Shop Now!",
-            "href": "#",
-            "title": "Embrace New Trends",
-            "subTitle": "Stylish clothes and accessories."
-          },
-          "alt": "Woman"
+          "variant": "Normal",
+          "href": "https://www.underarmour.com.br/curry?_q=curry&fuzzy=0&initialMap=ft&initialQuery=curry&map=ft&operator=and",
+          "text": "Compre Curry Brand"
         }
-      ],
-      "preload": true
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/HeroFull.tsx",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/b6ee6d2f-4a81-4e43-a7b5-30dc7641ef61",
+        "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/aa18eb20-dddf-439e-973e-0000b249e675",
+        "imageURL": "/tenis-de-basquete-under-armour-curry-11-future-wolf-3027723-101/p"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -52,118 +36,32 @@
         "props": {
           "sort": "",
           "count": 12,
-          "fuzzy": "automatic",
-          "query": "camiseta"
+          "collection": "839",
+          "similars": true
         }
       }
     },
     {
-      "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-      "title": "Departments",
-      "cta": "/all",
-      "items": [
-        {
-          "label": "Men",
-          "href": "/",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa"
-        },
-        {
-          "href": "/",
-          "label": "Women",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f6bea2b8-b248-4b42-9246-6e924a0acc8b"
-        },
-        {
-          "href": "/",
-          "label": "Kids",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/1b0ecaa2-9a13-4de2-bf17-5196948ed128"
-        },
-        {
-          "href": "/",
-          "label": "Hats",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/36e97897-5cf7-4271-a71c-683dc732ef8c"
-        },
-        {
-          "href": "/",
-          "label": "Accessories",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/92129655-fe40-4b29-8fdb-e7f71e67a5d1"
-        },
-        {
-          "href": "/",
-          "label": "Home & Living",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d0433c00-cd26-4638-b519-0cb64b9f82e8"
-        }
-      ]
-    },
-    {
-      "__resolveType": "site/sections/Images/Banner.tsx",
-      "title": "Register to Save",
-      "cta": {
-        "label": "Sign Up",
-        "href": "#"
-      },
-      "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
-      "images": {
-        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/cf96d47f-564f-40da-ad94-7acac5f39327",
-        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4d5c3212-3f75-4d50-89f3-970815748b43"
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/HeroFull.tsx",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/c43ee5c4-b46d-41c5-a2eb-f810e63f63b9",
+        "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/0f3a8c68-1d77-4666-9579-9c7a03d4d38d",
+        "imageURL": "/tenis-de-basquete-under-armour-curry-11-future-wolf-3027723-101/p"
       }
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
-      "title": "Hottest Deals",
-      "tabs": [
-        {
-          "products": {
-            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-            "props": {
-              "sort": "",
-              "query": "hat and bag",
-              "count": 10,
-              "fuzzy": "automatic"
-            }
-          },
-          "title": "Accessories"
-        },
-        {
-          "products": {
-            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-            "props": {
-              "sort": "",
-              "query": "Shirts",
-              "count": 10,
-              "fuzzy": "automatic"
-            }
-          },
-          "title": "Fashion"
-        },
-        {
-          "products": {
-            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-            "props": {
-              "sort": "",
-              "query": "stickers",
-              "count": 10,
-              "fuzzy": "automatic"
-            }
-          },
-          "title": "Stickers"
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "Featured Products",
+      "cta": "/mono",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "",
+          "count": 12,
+          "collection": "840",
+          "similars": true
         }
-      ]
-    },
-    {
-      "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
-      "label": "Sign up",
-      "placeholder": "Email address",
-      "empty": {
-        "title": "Get top deals, latest trends, and more.",
-        "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
-      },
-      "success": {
-        "title": "Thank you for subscribing!",
-        "description": "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!"
-      },
-      "failed": {
-        "title": "Oops!. Something went wrong!",
-        "description": "Something went wrong. Please try again. If the problem persists, please contact us."
       }
     },
     {
