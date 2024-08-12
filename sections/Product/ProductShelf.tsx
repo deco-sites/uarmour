@@ -26,11 +26,10 @@ export const loader = async (props: Props, req: Request) => {
     props.products.map(async (product) => {
       if (product?.isVariantOf?.model) {
         const variations = await fetch(
-          `https://www.mizuno.com.br/api/catalog_system/pub/products/search?fq=alternateIds_RefId:${
-            product.isVariantOf.model.substr(0, 10)
+          `https://www.underarmour.com.br/api/catalog_system/pub/products/search?fq=alternateIds_RefId:${
+            product.isVariantOf.model.substr(0, 8)
           }*&_from=0&_to=20`,
         ).then((r) => r.json());
-
         return {
           ...product,
           variationColors: variations,

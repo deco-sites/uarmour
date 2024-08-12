@@ -79,7 +79,7 @@ function ProductCard({
     >
       <figure
         class={clx(
-          "relative bg-base-200",
+          "relative bg-base-200 group",
           "rounded border border-transparent",
         )}
         style={{ aspectRatio: ASPECT_RATIO }}
@@ -91,7 +91,7 @@ function ProductCard({
           class={clx(
             "absolute top-0 left-0",
             "grid grid-cols-1 grid-rows-1",
-            "w-full bg-[#f2f2f2] rounded-[.5rem] ",
+            "w-full bg-[#f2f2f2]",
             !inStock && "opacity-70",
           )}
         >
@@ -110,62 +110,88 @@ function ProductCard({
             }}
             class={clx(
               "object-cover",
-              "rounded w-full",
-              "transition-opacity duration-[.4s] ease-in-out col-span-full row-span-full group-hover:opacity-0",
+              "w-full",
+              "col-span-full row-span-full",
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             preload={preload}
             loading={preload ? "eager" : "lazy"}
             decoding="async"
           />
-          <Image
-            src={back?.url ?? front.url!}
-            alt={back?.alternateName ?? front.alternateName}
-            width={WIDTH}
-            height={HEIGHT}
-            style={{
-              aspectRatio: ASPECT_RATIO,
-              mixBlendMode: "multiply",
-              contentVisibility: "auto",
-              backgroundSize: "contain",
-              backgroundPosition: "50%",
-              backgroundRepeat: "no-repeat",
-            }}
-            class={clx(
-              "object-cover",
-              "rounded w-full",
-              "col-span-full row-span-full",
-              "transition-opacity duration-[.4s] ease-in-out opacity-0 z-[-1] lg:z-[1] lg:group-hover:opacity-100",
-            )}
-            sizes="(max-width: 640px) 50vw, 20vw"
-            loading="lazy"
-            decoding="async"
-          />
         </a>
-        <div class="hidden lg:flex group/button w-[2.5rem] hover:w-full absolute left-[.625rem] bottom-[.625rem] z-[2]">
-          
+        <div class="p-[.3125rem] absolute bottom-0 left-0 w-full bg-white ease-in-out transition-all duration-[.4s] translate-y-full group-hover:translate-y-0">
+          <div class="flex gap-[20px]">
+            <ul class="lg:flex gap-[.875rem] overflow-hidden">
+              {secondVariants.map((variant) => (
+                <li class="bg-[#f0f0f0] cursor-pointer text-[#545454] min-w-[2rem] min-h-[2rem] flex justify-center items-center hover:border hover:border-[#1d1d1d]">
+                  <a
+                    class="w-full h-full font-[600] text-[.8125rem] leading-[.875rem] flex justify-center items-center"
+                    href={variant[1]}
+                  >
+                    {variant[0]}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button class="ml-auto border-[0] bg-[grey] rounded-l-[.25rem] relative right-[-5px]">
+              <Icon id="add-to-cart" size={25} />
+            </button>
+          </div>
+          <ul class="lg:flex mt-[16px] overflow-hidden min-h-[50px]">
+            {variationColors && variationColors.length > 0 &&
+              variationColors.map((variation) => (
+                <li class="mr-[22px] min-w-[45px] max-h-[45px] bg-[#f2f2f2]">
+                  <a
+                    class="w-full h-full min-w-[45px] max-h-[45px] bg-[#f2f2f2]"
+                    href={"/" + variation.linkText + "/p"}
+                  >
+                    <Image
+                      src={variation.items[0].images[0].imageUrl}
+                      alt={front.alternateName}
+                      width={45}
+                      style={{
+                        aspectRatio: ASPECT_RATIO,
+                        mixBlendMode: "multiply",
+                        contentVisibility: "auto",
+                        backgroundSize: "contain",
+                        backgroundPosition: "50%",
+                        backgroundRepeat: "no-repeat",
+                      }}
+                      height={46}
+                      class={"border border-[#eee5e5] bg-[#f2f2f2]"}
+                      loading={"lazy"}
+                      decoding="async"
+                    />
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </div>
+        <div class="absolute top-0 right-0">
+          <WishlistButton item={item} variant="icon" />
         </div>
       </figure>
 
       <a href={relativeUrl} class="mt-[.625rem]">
-        <div
-          class="grid"
-          style={{ gridTemplateColumns: "1fr minmax(auto,3.75rem)" }}
-        >
+        <span class="min-w-[5.125rem] max-w-[5.125rem] my-[10px] text-[#545454] bg-[#f0f0f0] leading-[.75rem] text-[.75rem] flex justify-center items-center p-[.375rem]">
+          {variationColors && variationColors.length > 0 &&
+            variationColors.length +
+              (variationColors.length > 1 ? " Cores" : " Cor")}
+        </span>
+        <div>
           <span
             style={{
               "-webkit-line-clamp": "2",
               "-webkit-box-orient": "vertical",
               display: "-webkit-box",
             }}
-            class="font-medium font-roboto text-[.875rem] leading-[1.125rem] overflow-hidden text-ellipsis	text-[#1d1d1d] "
+            class="font-[600] font-roboto text-[.875rem] leading-[1.125rem] overflow-hidden text-ellipsis	text-[#1d1d1d] "
           >
             {title}
           </span>
-          <WishlistButton item={item} variant="icon" />
         </div>
 
-        <div class="flex flex-col gap-[.75rem] pt-[.75rem]">
+        <div class="flex flex-col gap-[.625rem] pt-[.75rem]">
           {
             /* {listPrice && (
             <span class="line-through font-normal text-gray-400">
@@ -173,41 +199,29 @@ function ProductCard({
             </span>
           )} */
           }
-          <span class="font-bold text-[#001489] text-[.875rem] leading-[.875rem] font-roboto">
+          <span class="font-[600] text-[#1d1d1d] text-[.875rem] leading-[.875rem]">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
-          <span class="text-[#707070] text-[.875rem] leading-[.875rem] font-roboto">
+          {
+            /* <span class="text-[#707070] text-[.875rem] leading-[.875rem]">
             {installments}
-          </span>
-          <span class="text-[#707070] text-[.875rem] leading-[.875rem] font-roboto">
-            {variationColors && variationColors.length > 0 &&
-              variationColors.length + (variationColors.length > 1
-                  ? " cores disponíveis"
-                  : " cor disponível")}
-          </span>
+          </span> */
+          }
+          <Image
+            src={"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/f087df0c-30fb-440f-9e89-24f53bd4270f"}
+            width={83}
+            class={clx(
+              "object-cover",
+              "",
+              "",
+            )}
+            sizes="(max-width: 640px) 50vw, 20vw"
+            preload={preload}
+            loading={preload ? "eager" : "lazy"}
+            decoding="async"
+          />
         </div>
       </a>
-      <ul class="hidden variations lg:flex opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-[.4s] mt-[.625rem] overflow-hidden overflow-x-auto p-[.25rem] min-h-[50px]">
-        {variationColors && variationColors.length > 0 &&
-          variationColors.map((variation) => (
-            <li class="mr-[.1875rem] min-w-[45px]">
-              <a
-                class="w-full h-full min-w-[45px]"
-                href={"/" + variation.linkText + "/p"}
-              >
-                <Image
-                  src={variation.items[0].images[0].imageUrl}
-                  alt={front.alternateName}
-                  width={45}
-                  height={45}
-                  class={""}
-                  loading={"lazy"}
-                  decoding="async"
-                />
-              </a>
-            </li>
-          ))}
-      </ul>
 
       {/* SKU Selector */}
       {
