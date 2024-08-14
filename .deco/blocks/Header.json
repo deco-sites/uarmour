@@ -1,23 +1,687 @@
 {
   "__resolveType": "site/sections/Header/Header.tsx",
-  "navItems": {
-    "__resolveType": "navbar"
-  },
+  "navItems": [
+    {
+      "color": "#ffffff",
+      "children": [],
+      "text": "Lançamentos",
+      "url": "/"
+    },
+    {
+      "color": "#ffffff",
+      "children": [
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Roupas",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Agasalhos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Calças",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas Manga Longa",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Coletes",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Compressão",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Cuecas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Moletons e Jaquetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Polos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Shorts e Bermudas",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Calçados",
+            "url": "/"
+          },
+          "links": [],
+          "seeMore": {
+            "text": "Vre "
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Acessórios",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Bonés, Viseiras e Toucas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Cinto",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Faixa",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Luvas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Luvas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Malas, Mochilas e Bolsas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Manguito",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Meias",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Munhequeiras",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Máscaras",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver "
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Esportes",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Basquete",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Futebol",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Futebol Americano",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Golf",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Treino",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        }
+      ],
+      "text": "Masculino",
+      "url": "/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/3ad081c1-66bb-41c5-b6d0-cdecaf8f8971",
+      "imageUrl": "/",
+      "imageText": "Camiseta Curry"
+    },
+    {
+      "color": "#ffffff",
+      "children": [
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Roupas",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Agasalhos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Calcinhas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Calças",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas Manga Longa",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Leggings e Capris",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Macacões",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Moletons e Jaquetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Moletons e Jaquetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Polos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Regatas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Shorts e Bermudas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Tops Esportivos",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Calçados",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Basquete",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Chinelos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Chuteiras",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Sportstyle",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Treino",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Acessórios",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Bonés, Viseiras e Toucas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Cinto",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Faixa",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Luvas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Luvas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Malas, Mochilas e Bolsas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Manguito",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Meias",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Munhequeiras",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Máscaras",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver "
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Esportes",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Basquete",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Futebol",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Futebol Americano",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Golf",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Treino",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Plus Size",
+            "url": "/"
+          },
+          "links": []
+        }
+      ],
+      "text": "Feminino",
+      "url": "/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/d6f98627-bd1e-4be3-af64-140df762cb74",
+      "imageUrl": "/",
+      "imageText": "Legging de Treino"
+    },
+    {
+      "color": "#ffffff",
+      "children": [
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Roupas",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Agasalhos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Calcinhas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Calças",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas Manga Longa",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Leggings e Capris",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Macacões",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Moletons e Jaquetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Moletons e Jaquetas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Polos",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Regatas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Shorts e Bermudas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Tops Esportivos",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Calçados",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Acessórios",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Boné",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Faixa",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Meia",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver todos",
+            "url": "/"
+          }
+        },
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Gênero",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Meninas",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Meninos",
+              "url": "/"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/"
+          }
+        }
+      ],
+      "text": "Infantil",
+      "url": "/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/0874529b-c416-4ec4-a749-a5484cad6921",
+      "imageUrl": "/",
+      "imageText": "Regata de Treino"
+    },
+    {
+      "color": "#ffffff",
+      "children": [
+        {
+          "title": {
+            "color": "#000000",
+            "text": "Destaques",
+            "url": "/"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Charged Hit",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Curry Band",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Project Rock",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Run Anywhere",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Tribase",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "UA Unstoppable",
+              "url": "/"
+            },
+            {
+              "color": "#000000",
+              "text": "Vanish",
+              "url": "/"
+            }
+          ]
+        }
+      ],
+      "text": "Coleções",
+      "url": "/",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11898/7b4e4e75-5492-4f4e-8a1c-7cec65fcb9fc",
+      "imageText": "Curry 11 Girl Dad",
+      "imageUrl": "/"
+    },
+    {
+      "color": "#ffffff",
+      "children": [],
+      "text": "Curry",
+      "url": "/"
+    },
+    {
+      "color": "#ffffff",
+      "children": [],
+      "text": "Outlet",
+      "url": "/"
+    }
+  ],
   "searchbar": {
-    "placeholder": "What are you looking for?",
+    "placeholder": "Buscar",
     "loader": {
       "__resolveType": "resolved",
       "data": null
     }
   },
   "alerts": [
-    "<p>Get 10% off today: <strong>NEW10</strong></p>"
+    "<a href=\"/giftback\" class=\"underarmourbr-store-theme-6-x-textLink\" data-mce-block=\"true\" data-mce-href=\"../../../giftback\"><p>20% de giftback para sua próxima compra - Confira as regras</p></a>",
+    "<p class=\"underarmourbr-store-theme-6-x-textLink\" style=\"cursor: pointer;\" data-mce-style=\"cursor: pointer;\">10% off na primeira compra - Cadastre-se!</p>",
+    "<a href=\"/politica-de-promocoes\" class=\"underarmourbr-store-theme-6-x-textLink\" data-mce-block=\"true\" data-mce-href=\"../../../politica-de-promocoes\"><p>Frete grátis acima de R$ 299,99 - Confira!</p></a>"
   ],
   "variant": "initial",
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ed9f7e80-86a8-4b72-9809-2e4e2e5f0e53",
     "alt": "Deco Storefront",
-    "width": 160,
-    "height": 40
+    "width": 43,
+    "height": 24,
+    "src": "https://underarmourbr.vtexassets.com/assets/vtex/assets-builder/underarmourbr.store-theme/6.0.26/icons/header/underarmour-icon___605c6b83f5117b9223e8a807669d5162.svg",
+    "mobileSrc": "https://underarmourbr.vtexassets.com/assets/vtex/assets-builder/underarmourbr.store-theme/6.0.26/icons/header/underarmour-icon___605c6b83f5117b9223e8a807669d5162.svg"
   }
 }

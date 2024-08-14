@@ -133,8 +133,36 @@ function ProductCard({
                 </li>
               ))}
             </ul>
-            <button class="ml-auto border-[0] bg-[grey] rounded-l-[.25rem] relative right-[-5px]">
-              <Icon id="add-to-cart" size={25} />
+            <button class="w-[30px] ml-auto border-[0] bg-[grey] rounded-l-[.25rem] relative right-[-5px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="21"
+                viewBox="0 0 25 21"
+              >
+                <g
+                  fill="#fff"
+                  data-name="Group 3962"
+                  transform="translate(-228 -12.187)"
+                >
+                  <path
+                    stroke="#fff"
+                    stroke-width="0.5"
+                    d="M252.725 19.424a.655.655 0 00-.65-.582h-1.834v-.619a2.828 2.828 0 00-5.653 0v.619h-1.878a.656.656 0 00-.649.572l-.056 10.508a.655.655 0 00.65.735h9.42a.653.653 0 00.643-.722zm-3.268-.582h-4.085v-.619a2.044 2.044 0 014.085 0zm-4.476 2.106a.386.386 0 00.391-.38v-.849h4.085v.849a.392.392 0 00.784 0v-.849h1.634l-.054 10.062h-8.914V19.718h1.681v.849a.386.386 0 00.393.38z"
+                    data-name="Path 3600"
+                  >
+                  </path>
+                  <text
+                    data-name="+"
+                    font-family="SegoeUI, Segoe UI"
+                    font-size="16"
+                    letter-spacing=".055em"
+                    transform="translate(234 29.187)"
+                  >
+                    <tspan x="-5.473" y="0">+</tspan>
+                  </text>
+                </g>
+              </svg>
             </button>
           </div>
           <ul class="lg:flex mt-[16px] overflow-hidden min-h-[50px]">

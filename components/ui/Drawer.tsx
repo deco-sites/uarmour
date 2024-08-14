@@ -2,7 +2,6 @@ import { useScript } from "deco/hooks/useScript.ts";
 import { type ComponentChildren } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import Icon from "./Icon.tsx";
 
 export interface Props {
   open?: boolean;
@@ -60,7 +59,7 @@ function Drawer({
             "[[data-aside]&_section]:contents", // lazy-loading via useSection
           )}
         >
-          <label for={id} class="drawer-overlay" />
+          <label for={id} class="drawer-overlay bg-[transparent_!important]" />
           {aside}
         </aside>
       </div>
@@ -73,26 +72,42 @@ function Drawer({
 }
 
 function Aside(
-  { title, drawer, children }: {
+  { title, drawer, children, hasTop = true }: {
     title: string;
     drawer: string;
     children: ComponentChildren;
+    hasTop?: boolean;
   },
 ) {
   return (
     <div
       data-aside
-      class="bg-base-100 grid grid-rows-[auto_1fr] h-full divide-y"
-      style={{ maxWidth: "100vw" }}
+      class="grid w-full divide-y divide-[#f2f2f2] lg:w-[400px] h-full relative lg:max-h-[calc(100dvh-68px)] lg:top-[68px]"
+      style={{
+        backgroundColor: hasTop ? "#fff" : "#f9f9f9",
+        maxWidth: "100vw",
+        gridTemplateRows: hasTop ? "auto 1fr" : "auto",
+        top: hasTop ? "" : "118px",
+        boxShadow: "0px 0px 20px rgba(0,0,0,0.16)",
+      }}
     >
-      <div class="flex justify-between items-center">
-        <h1 class="px-4 py-3">
-          <span class="font-medium text-2xl">{title}</span>
-        </h1>
-        <label for={drawer} aria-label="X" class="btn btn-ghost">
-          <Icon id="close" />
-        </label>
-      </div>
+      {hasTop &&
+        (
+          <div class="flex justify-between items-center p-[20px] pb-[12px] pr-[35px]">
+            <h1 class="">
+              <span class="text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]">
+                {title}
+              </span>
+            </h1>
+            <label
+              for={drawer}
+              aria-label="X"
+              class="cursor-pointer text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]"
+            >
+              X
+            </label>
+          </div>
+        )}
       {children}
     </div>
   );
