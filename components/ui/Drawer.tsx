@@ -2,6 +2,8 @@ import { useScript } from "deco/hooks/useScript.ts";
 import { type ComponentChildren } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
+import Icon from "./Icon.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
   open?: boolean;
@@ -93,18 +95,25 @@ function Aside(
     >
       {hasTop &&
         (
-          <div class="flex justify-between items-center p-[20px] pb-[12px] pr-[35px]">
-            <h1 class="">
+          <div class="flex justify-between items-center p-[20px] pb-[12px] pr-[35px] border-b border-[#707070] h-[66px]">
+            {
+              /* <h1 class="">
               <span class="text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]">
                 {title}
               </span>
-            </h1>
+            </h1> */
+            }
+            <Image
+              class="mx-auto"
+              width={46}
+              src={"https://underarmourbr.vtexassets.com/assets/vtex/assets-builder/underarmourbr.store-theme/6.0.26/icons/header/under-black-icon___0fc911fe3ff9e9f0a96f2c60abc84c76.svg"}
+            />
             <label
               for={drawer}
               aria-label="X"
-              class="cursor-pointer text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]"
+              class="absolute right-[30px] cursor-pointer text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]"
             >
-              X
+              <Icon id={"close"} />
             </label>
           </div>
         )}

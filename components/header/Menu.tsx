@@ -11,9 +11,9 @@ function MenuItem({ item }: { item: NavItemNode }) {
       {item.children.length > 0 &&
         <input id="collapse-input-animation" type="checkbox" />}
       <div
-        class="collapse-title flex justify-between items-center p-[20px] text-[#060606] text-[12px] leading-[11px] font-roboto tracking-[0rem] uppercase"
+        class="collapse-title flex justify-between items-center p-[20px] text-[#000000] text-[16px] leading-[1.3125rem] font-[600] tracking-[0rem]"
         style={{
-          color: item.color ? item.color : "inherit",
+          color: "inherit",
           minHeight: "fit-content",
           height: "min-content",
         }}
@@ -24,9 +24,10 @@ function MenuItem({ item }: { item: NavItemNode }) {
         {item.children.length > 0 &&
           (
             <Icon
-              class="abtransition-all duration-300 rotate-90"
+              class="abtransition-all duration-300 text-[#757575]"
               id={"chevron-right"}
-              size={10}
+              fill={"#757575"}
+              size={35}
             />
           )}
       </div>
@@ -49,9 +50,10 @@ function MenuItem({ item }: { item: NavItemNode }) {
                         >
                           {node.title.text}
                           <Icon
-                            class="abtransition-all duration-300 rotate-90"
+                            class="abtransition-all duration-300 text-[#757575]"
                             id={"chevron-right"}
-                            size={10}
+                            fill={"#757575"}
+                            size={35}
                           />
                         </div>
                         <div class="collapse-content">
@@ -101,7 +103,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
 function Menu({ navItems }: Props) {
   return (
     <div
-      class="flex flex-col h-full overflow-y-auto bg-[#f9f9f9]"
+      class="flex flex-col h-full overflow-y-auto bg-white"
       style={{ minWidth: "100vw" }}
     >
       <ul class="flex-grow flex flex-col divide-y divide-[#f2f2f2] overflow-y-auto">

@@ -18,7 +18,8 @@ export type AvailableIcons =
   | "check-circle"
   | "error"
   | "trash"
-  | "add-to-cart";
+  | "add-to-cart"
+  | "account";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

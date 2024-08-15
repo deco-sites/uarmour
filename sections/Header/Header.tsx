@@ -101,7 +101,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
-        <Drawer.Aside hasTop={false} title="Menu" drawer={SIDEMENU_DRAWER_ID}>
+        <Drawer.Aside hasTop={true} title="Menu" drawer={SIDEMENU_DRAWER_ID}>
           <div
             id={SIDEMENU_CONTAINER_ID}
             class="h-full flex items-center justify-center"
@@ -173,7 +173,7 @@ function Header({
 
   return (
     <header
-      class="mb-[65px] lg:mb-[21px]"
+      class="mb-[38px] lg:mb-[80px]"
       style={{
         height: device === "desktop"
           ? HEADER_HEIGHT_DESKTOP
@@ -185,6 +185,17 @@ function Header({
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
+      </div>
+      <div class="w-full absolute top-[126px] z-20 bg-[#1d1d1d] hidden lg:flex justify-center items-center h-[40px] border-t border-[#ffffff] gap-[10px]">
+        <span class="text-[#ffffff] uppercase font-[600] text-[13px] leading-[1.0625rem] tracking-[0.055rem]">
+          TÊNIS: R$ 100 OFF ACIMA DE R$ 399,99
+        </span>
+        <a
+          href="#"
+          class="text-[#707070] underline uppercase font-[600] text-[13px] leading-[1.0625rem] tracking-[0.055rem]"
+        >
+          CONFIRA!
+        </a>
       </div>
     </header>
   );
