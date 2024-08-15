@@ -47,6 +47,7 @@ export default function HeroFlats({
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
               alt={image}
+              preload={true}
               decoding="sync"
               loading="eager"
             />
@@ -58,6 +59,7 @@ export default function HeroFlats({
               sizes="(max-width: 640px) 100vw, 30vw"
               src={mobileImage}
               alt={mobileImage}
+              preload={true}
               decoding="sync"
               loading="eager"
             />
