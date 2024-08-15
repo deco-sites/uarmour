@@ -21,6 +21,7 @@ export default function MobileCards({
           <a href={card.href} class="w-full h-full">
             <Image
               width={160}
+              height={160}
               class="w-full object-fit"
               sizes="(max-width: 640px) 100vw, 30vw"
               src={card.image}

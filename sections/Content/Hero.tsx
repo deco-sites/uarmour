@@ -42,7 +42,8 @@ export default function HeroFlats({
         >
           {image && (
             <Image
-              width={640}
+              width={1170}
+              height={720}
               class="hidden lg:flex lg:w-[60%] object-fit"
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
@@ -54,7 +55,8 @@ export default function HeroFlats({
           )}
           {mobileImage && (
             <Image
-              width={640}
+              width={414}
+              height={414}
               class="w-full lg:hidden object-fit"
               sizes="(max-width: 640px) 100vw, 30vw"
               src={mobileImage}
