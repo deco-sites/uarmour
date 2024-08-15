@@ -47,8 +47,8 @@ export default function HeroFlats({
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
               alt={image}
-              decoding="async"
-              loading="lazy"
+              decoding="sync"
+              loading="eager"
             />
           )}
           {mobileImage && (
@@ -58,8 +58,8 @@ export default function HeroFlats({
               sizes="(max-width: 640px) 100vw, 30vw"
               src={mobileImage}
               alt={mobileImage}
-              decoding="async"
-              loading="lazy"
+              decoding="sync"
+              loading="eager"
             />
           )}
           <div

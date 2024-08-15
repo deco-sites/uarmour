@@ -32,6 +32,7 @@ function ProductSlider({ products, itemListName }: Props) {
                 )}
               >
                 <ProductCard
+                  preload={false}
                   index={index}
                   product={product}
                   itemListName={itemListName}
