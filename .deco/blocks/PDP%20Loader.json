@@ -4,14 +4,10 @@
       "param": "slug",
       "__resolveType": "website/functions/requestToParam.ts"
     },
-    "__resolveType": "shopify/loaders/ProductDetailsPage.ts",
-    "indexingSkus": true,
-    "similars": true
+    "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+    "similars": true,
+    "indexingSkus": false
   },
-  "extensions": [
-    {
-      "__resolveType": "vtex/loaders/product/extensions/detailsPage.ts"
-    }
-  ],
+  "extensions": [],
   "__resolveType": "commerce/loaders/product/extensions/detailsPage.ts"
 }
