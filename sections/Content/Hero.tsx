@@ -32,7 +32,7 @@ export default function HeroFlats({
 }: Props) {
   return (
     <div>
-      <div class="mx-auto flex flex-col items-center gap-[5rem] bg-[#000]">
+      <div class="mx-auto flex flex-col items-center gap-20 bg-secondary">
         <div
           class={`flex w-full xl:container xl:mx-auto z-10 ${
             image
@@ -44,7 +44,7 @@ export default function HeroFlats({
             <Image
               width={1170}
               height={720}
-              class="hidden lg:flex lg:w-[60%] object-fit"
+              class="hidden lg:flex lg:w-3/5 object-fit"
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
               alt={image}
@@ -67,18 +67,18 @@ export default function HeroFlats({
             />
           )}
           <div
-            class={`hidden lg:flex lg:flex-col px-[5rem] pb-[5rem] lg:w-[40%] space-y-4 gap-4 ${
+            class={`hidden lg:flex lg:flex-col px-20 pb-20 lg:w-2/5 space-y-4 ${
               image ? "lg:w-1/2" : "flex flex-col items-center justify-end"
             }`}
           >
             <div
-              class="inline-block text-[5rem] leading-[100%] font-black text-[#fff]"
+              class="inline-block text-[5rem] leading-[100%] font-black text-white"
               dangerouslySetInnerHTML={{
                 __html: title,
               }}
             >
             </div>
-            <p class="text-white text-[16px] md:text-[18px] leading-[150%]">
+            <p class="text-white text-base md:text-lg leading-[150%]">
               {description}
             </p>
             <div
@@ -91,7 +91,7 @@ export default function HeroFlats({
                   id={item?.id}
                   href={item?.href}
                   target={item?.href.includes("http") ? "_blank" : "_self"}
-                  class={`group w-full relative overflow-hidden text-center rounded-[.25rem] text-[16px] hover:bg-gradient-to-r py-[.75rem] transition-all duration-300 ease-out ${
+                  class={`group w-full relative overflow-hidden text-center rounded text-base hover:bg-gradient-to-r py-3 transition-all duration-300 ease-out ${
                     item.variant === "Reverse"
                       ? "bg-secondary text-white"
                       : "bg-accent text-black"
@@ -99,7 +99,7 @@ export default function HeroFlats({
                 >
                   <span class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40">
                   </span>
-                  <span class="relative font-[600] text-[16px] text-center">
+                  <span class="relative font-semibold text-base text-center">
                     {item?.text}
                   </span>
                 </a>

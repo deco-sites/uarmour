@@ -27,7 +27,7 @@ export default function Gallery({
   banners = [],
 }: Props) {
   return (
-    <div class="flex p-[2rem] gap-[2rem] lg:gap-[3rem] lg:justify-center overflow-scroll lg:overflow-hidden w-full mt-[2rem] mb-[4rem]">
+    <div class="flex p-8 gap-8 lg:gap-12 lg:justify-center overflow-scroll lg:overflow-hidden w-full mt-8 mb-16">
       {banners.map((banner) => (
         <div class="lg:w-[42%]">
           <a
@@ -53,12 +53,12 @@ export default function Gallery({
               loading="lazy"
             />
             <p
-              class="text-[.8rem] text-[#000] font-bold "
+              class="text-[.8rem] text-secondary font-bold "
               style={{ margin: "1rem 0 -.25rem" }}
             >
               {banner.title}
             </p>
-            <p class="text-[.8rem] text-[#000] ">{banner.description}</p>
+            <p class="text-[.8rem] text-secondary ">{banner.description}</p>
           </a>
         </div>
       ))}

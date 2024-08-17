@@ -17,7 +17,7 @@ function ProductSlider({ products, itemListName }: Props) {
     <>
       <div
         id={id}
-        class="grid grid-rows-1 relative px-[1.25rem] mt-[5rem] lg:mt-[3rem] mx-auto max-w-[1060px]"
+        class="grid grid-rows-1 relative px-5 mt-20 lg:mt-12 mx-auto max-w-[1060px]"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}

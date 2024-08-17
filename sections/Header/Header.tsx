@@ -57,7 +57,7 @@ const Desktop = (
   { navItems, logo, searchbar }: Props,
 ) => (
   <>
-    <div class="mx-auto w-full flex items-center z-10 relative px-[50px] border-t border-[#ffffff]">
+    <div class="mx-auto w-full flex items-center z-10 relative px-[50px] border-t border-white">
       <a class="w-auto" href="/" aria-label="Store logo">
         <Image
           class="mb-[5px]"
@@ -68,11 +68,11 @@ const Desktop = (
         />
       </a>
 
-      <ul class="flex justify-between w-[70%] gap-[10px] pl-[40px] max-w-[870px] ml-auto px-[30px]">
+      <ul class="flex justify-between w-[70%] gap-2.5 pl-10 max-w-[870px] ml-auto px-[30px]">
         {navItems?.map((item) => <NavItem item={item} />)}
       </ul>
 
-      <div class="flex w-[29%] gap-[1.25rem] justify-center items-center">
+      <div class="flex w-[29%] gap-5 justify-center items-center">
         <Searchbar {...searchbar} />
         {/* <SignIn variant="desktop" /> */}
         <Image
@@ -114,7 +114,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
     />
 
     <div
-      class="grid items-center w-screen px-[16px] py-[15px] border-t border-[#ffffff]"
+      class="grid items-center w-screen px-4 py-[15px] border-t border-white"
       style={{
         height: NAVBAR_HEIGHT_MOBILE,
         gridTemplateColumns: "5rem auto 5rem",
@@ -148,7 +148,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
         </a>
       )}
 
-      <div class="flex gap-[1rem] items-center justify-end">
+      <div class="flex gap-4 items-center justify-end">
         <SignIn variant="mobile" />
         <Bag />
       </div>
@@ -173,26 +173,24 @@ function Header({
 
   return (
     <header
-      class="mb-[38px] lg:mb-[80px]"
+      class="mb-[38px] lg:mb-20"
       style={{
-        height: device === "desktop"
-          ? HEADER_HEIGHT_DESKTOP
-          : HEADER_HEIGHT_MOBILE,
+        height: device === "desktop" ? "70px" : HEADER_HEIGHT_MOBILE,
       }}
     >
-      <div class="fixed w-full z-40 top-0 left-0 bg-[#1d1d1d]">
+      <div class="fixed w-full z-40 top-0 left-0 bg-primary">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
       </div>
-      <div class="w-full absolute top-[126px] z-20 bg-[#1d1d1d] hidden lg:flex justify-center items-center h-[40px] border-t border-[#ffffff] gap-[10px]">
-        <span class="text-[#ffffff] uppercase font-[600] text-[13px] leading-[1.0625rem] tracking-[0.055rem]">
+      <div class="w-full absolute top-[122px] z-20 bg-primary hidden lg:flex justify-center items-center h-10 border-t border-white gap-2.5">
+        <span class="text-white uppercase font-semibold text-[13px] leading-[1.0625rem] tracking-[0.055rem]">
           TÊNIS: R$ 100 OFF ACIMA DE R$ 399,99
         </span>
         <a
           href="#"
-          class="text-[#707070] underline uppercase font-[600] text-[13px] leading-[1.0625rem] tracking-[0.055rem]"
+          class="text-neutral-content underline uppercase font-semibold text-[13px] leading-[1.0625rem] tracking-[0.055rem]"
         >
           CONFIRA!
         </a>

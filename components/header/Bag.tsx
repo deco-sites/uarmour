@@ -34,14 +34,14 @@ function Bag() {
       >
         <span
           id={id}
-          class="hidden absolute top-[-5px] right-0 text-white lg:text-[#f2f2f2] bg-[#0085ca] rounded-full text-[.75rem] font-roboto w-[20px] h-[20px] flex justify-center items-center"
+          class="hidden absolute top-[-5px] right-0 text-white lg:text-base-200 bg-[#0085ca] rounded-full text-xs font-roboto w-[20px] h-[20px] flex justify-center items-center"
         />
 
         <span class="hidden lg:flex">
           <Icon
             size={17}
             id="shopping_bag"
-            class="text-[#949494]"
+            class="text-accent-content"
             fill={"#949494"}
           />
         </span>

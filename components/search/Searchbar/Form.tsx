@@ -82,13 +82,13 @@ export default function Searchbar(
       <form
         id={SEARCHBAR_INPUT_FORM_ID}
         action={ACTION}
-        class="w-full grid items-center justify-between h-[44px] lg:h-auto p-[.5rem_1.125rem] lg:p-0 lg:py-[.7rem] bg-[#f0f0f0] rounded-[1.875rem] lg:rounded-[0] lg:bg-transparent lg:border-b lg:border-[#949494] transition-all duration-[400ms] ease-in-out"
+        class="w-full grid items-center justify-between h-11 lg:h-auto p-[.5rem_1.125rem] lg:p-0 lg:py-[.7rem] bg-base-content rounded-[1.875rem] lg:rounded-none lg:bg-transparent lg:border-b lg:border-accent-content transition-all duration-[.4s] ease-in-out"
         style={{ gridTemplateColumns: "3fr 2rem" }}
       >
         <input
           autoFocus
           tabIndex={0}
-          class="outline-none bg-transparent text-[#949494] lg:text-[#949494] text-[.875rem] lg:text-[1rem] leading-[1.25rem] lg:leading-[1.3125rem] lg:font-[600]"
+          class="outline-none bg-transparent text-accent-content lg:text-accent-content text-sm lg:text-base leading-5 lg:leading-[1.3125rem] lg:font-semibold"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -112,7 +112,7 @@ export default function Searchbar(
             size={23}
             id="search"
             fill={"white"}
-            class="text-[#949494] inline [.htmx-request_&]:hidden"
+            class="text-accent-content inline [.htmx-request_&]:hidden"
           />
         </button>
         {

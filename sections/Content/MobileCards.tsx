@@ -15,7 +15,7 @@ export default function MobileCards({
   cards = [],
 }: Props) {
   return (
-    <div class="lg:hidden my-[40px] px-[32px] flex gap-[2rem] flex-wrap justify-between	">
+    <div class="lg:hidden my-10 px-8 flex gap-8 flex-wrap justify-between	">
       {cards.map((card) => (
         <div class="flex flex-col w-full max-w-[44%]">
           <a href={card.href} class="w-full h-full">
@@ -31,7 +31,7 @@ export default function MobileCards({
             />
           </a>
           <a
-            class="my-[.5rem] flex font-bold text-[#000] leading-[1.5] text-[16px]"
+            class="my-2 flex font-bold text-secondary leading-normal text-base"
             href={card.href}
           >
             {card.description}

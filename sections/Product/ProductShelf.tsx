@@ -74,13 +74,13 @@ export default function ProductShelf(
       {...viewItemListEvent}
       class="[view-transition-name:loading-fallback-2]"
     >
-      <div class="flex flex-col gap-[1.5rem] max-w-[60%] items-center justify-center mx-auto">
+      <div class="flex flex-col gap-6 max-w-3/5 items-center justify-center mx-auto">
         <h3
-          class="text-[#000] font-black uppercase text-[2.5rem] lg:text-[4rem] leading-[1] text-center"
+          class="text-secondary font-black uppercase text-[2.5rem] lg:text-[4rem] leading-none text-center"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <div
-          class="text-[#000] text-[.75rem] text-center font-[600]"
+          class="text-secondary text-xs text-center font-semibold"
           dangerouslySetInnerHTML={{ __html: description }}
         />
         <a
@@ -88,7 +88,7 @@ export default function ProductShelf(
           id={cta?.id}
           href={cta?.href}
           target={cta?.href.includes("http") ? "_blank" : "_self"}
-          class={`group relative overflow-hidden text-center rounded-[.5rem] text-[16px] hover:bg-gradient-to-r p-[1rem_2rem] lg:p-[1rem_5rem] transition-all duration-300 ease-out ${
+          class={`group relative overflow-hidden text-center rounded-lg	 text-base hover:bg-gradient-to-r p-[1rem_2rem] lg:p-[1rem_5rem] transition-all duration-300 ease-out ${
             cta.variant === "Reverse"
               ? "bg-secondary text-white"
               : "bg-black text-white"
@@ -96,7 +96,7 @@ export default function ProductShelf(
         >
           <span class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40">
           </span>
-          <span class="relative font-[600] text-[.75rem] text-center">
+          <span class="relative font-semibold text-xs text-center">
             {cta?.text}
           </span>
         </a>

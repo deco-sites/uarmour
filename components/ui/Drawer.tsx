@@ -84,7 +84,7 @@ function Aside(
   return (
     <div
       data-aside
-      class="grid w-full divide-y divide-[#f2f2f2] lg:w-[400px] h-full relative lg:max-h-[calc(100dvh-68px)] lg:top-[68px]"
+      class="grid w-full divide-y divide-base-200 lg:w-[400px] h-full relative lg:max-h-[calc(100dvh-68px)] lg:top-[68px]"
       style={{
         backgroundColor: hasTop ? "#fff" : "#f9f9f9",
         maxWidth: "100vw",
@@ -95,10 +95,10 @@ function Aside(
     >
       {hasTop &&
         (
-          <div class="flex justify-between items-center p-[20px] pb-[12px] pr-[35px] border-b border-[#707070] h-[66px]">
+          <div class="flex justify-between items-center p-5 pb-3 pr-[35px] border-b border-neutral-content h-[66px]">
             {
               /* <h1 class="">
-              <span class="text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]">
+              <span class="text-neutral text-base font-bold leading-6 tracking-normal">
                 {title}
               </span>
             </h1> */
@@ -111,7 +111,7 @@ function Aside(
             <label
               for={drawer}
               aria-label="X"
-              class="absolute right-[30px] cursor-pointer text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]"
+              class="absolute right-[30px] cursor-pointer text-neutral text-base font-bold leading-6 tracking-normal"
             >
               <Icon id={"close"} />
             </label>

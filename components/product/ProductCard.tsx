@@ -91,7 +91,7 @@ function ProductCard({
           class={clx(
             "absolute top-0 left-0",
             "grid grid-cols-1 grid-rows-1",
-            "w-full bg-[#f2f2f2]",
+            "w-full bg-base-200",
             !inStock && "opacity-70",
           )}
         >
@@ -120,12 +120,12 @@ function ProductCard({
           />
         </a>
         <div class="p-[.3125rem] absolute bottom-0 left-0 w-full bg-white ease-in-out transition-all duration-[.4s] translate-y-full group-hover:translate-y-0">
-          <div class="flex gap-[20px]">
-            <ul class="lg:flex gap-[.875rem] overflow-hidden">
+          <div class="flex gap-5">
+            <ul class="lg:flex gap-3.5 overflow-hidden">
               {secondVariants.map((variant) => (
-                <li class="bg-[#f0f0f0] cursor-pointer text-[#545454] min-w-[2rem] min-h-[2rem] flex justify-center items-center hover:border hover:border-[#1d1d1d]">
+                <li class="bg-base-content cursor-pointer text-primary-content min-w-[2rem] min-h-[2rem] flex justify-center items-center hover:border hover:border-primary">
                   <a
-                    class="w-full h-full font-[600] text-[.8125rem] leading-[.875rem] flex justify-center items-center"
+                    class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem] flex justify-center items-center"
                     href={variant[1]}
                   >
                     {variant[0]}
@@ -133,7 +133,7 @@ function ProductCard({
                 </li>
               ))}
             </ul>
-            <button class="w-[30px] ml-auto border-[0] bg-[grey] rounded-l-[.25rem] relative right-[-5px]">
+            <button class="w-[30px] ml-auto border-[0] bg-[grey] rounded-l relative right-[-5px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -165,12 +165,12 @@ function ProductCard({
               </svg>
             </button>
           </div>
-          <ul class="lg:flex mt-[16px] overflow-hidden min-h-[50px]">
+          <ul class="lg:flex mt-4 overflow-hidden min-h-[50px]">
             {variationColors && variationColors.length > 0 &&
               variationColors.map((variation) => (
-                <li class="mr-[22px] min-w-[45px] max-h-[45px] bg-[#f2f2f2]">
+                <li class="mr-[22px] min-w-[45px] max-h-[45px] bg-base-200">
                   <a
-                    class="w-full h-full min-w-[45px] max-h-[45px] bg-[#f2f2f2]"
+                    class="w-full h-full min-w-[45px] max-h-[45px] bg-base-200"
                     href={"/" + variation.linkText + "/p"}
                   >
                     <Image
@@ -186,7 +186,7 @@ function ProductCard({
                         backgroundRepeat: "no-repeat",
                       }}
                       height={46}
-                      class={"border border-[#eee5e5] bg-[#f2f2f2]"}
+                      class={"border border-secondary-content bg-base-200"}
                       loading={"lazy"}
                       decoding="async"
                     />
@@ -200,8 +200,8 @@ function ProductCard({
         </div>
       </figure>
 
-      <a href={relativeUrl} class="mt-[.625rem]">
-        <span class="min-w-[5.125rem] max-w-[5.125rem] my-[10px] text-[#545454] bg-[#f0f0f0] leading-[.75rem] text-[.75rem] flex justify-center items-center p-[.375rem]">
+      <a href={relativeUrl} class="mt-2.5">
+        <span class="min-w-[5.125rem] max-w-[5.125rem] my-2.5 text-primary-content bg-base-content leading-3 text-xs flex justify-center items-center p-1.5">
           {variationColors && variationColors.length > 0 &&
             variationColors.length +
               (variationColors.length > 1 ? " Cores" : " Cor")}
@@ -213,13 +213,13 @@ function ProductCard({
               "-webkit-box-orient": "vertical",
               display: "-webkit-box",
             }}
-            class="font-[600] font-roboto text-[.875rem] leading-[1.125rem] overflow-hidden text-ellipsis	text-[#1d1d1d] "
+            class="font-semibold font-roboto text-sm leading-[1.125rem] overflow-hidden text-ellipsis	text-primary "
           >
             {title}
           </span>
         </div>
 
-        <div class="flex flex-col gap-[.625rem] pt-[.75rem]">
+        <div class="flex flex-col gap-2.5 pt-3">
           {
             /* {listPrice && (
             <span class="line-through font-normal text-gray-400">
@@ -227,11 +227,11 @@ function ProductCard({
             </span>
           )} */
           }
-          <span class="font-[600] text-[#1d1d1d] text-[.875rem] leading-[.875rem]">
+          <span class="font-semibold text-primary text-sm leading-[.875rem]">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
           {
-            /* <span class="text-[#707070] text-[.875rem] leading-[.875rem]">
+            /* <span class="text-neutral-content text-sm leading-[.875rem]">
             {installments}
           </span> */
           }

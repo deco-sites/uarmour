@@ -51,9 +51,9 @@ function Footer({
   security,
 }: Props) {
   return (
-    <footer class="bg-[#f0f0f0]">
-      <div class="hidden lg:flex py-[40px] w-full max-w-[1025px] mx-auto">
-        <div class="flex justify-between gap-[20px] w-full">
+    <footer class="bg-base-content">
+      <div class="hidden lg:flex py-10 w-full max-w-[1025px] mx-auto">
+        <div class="flex justify-between gap-5 w-full">
           <div class="max-w-[420px] w-full h-full flex flex-col">
             <Image
               class="mb-[25px]"
@@ -64,24 +64,24 @@ function Footer({
               alt=""
             />
             <div class="flex w-auto items-center gap-[15px] pr-[30px]">
-              <div class="h-[48px] w-full relative">
-                <span class="z-[1] absolute top-[-15px] bg-[#f0f0f0] left-[12px] p-[5px] text-[#1d1d1d] text-[14px] font-bold leading-[1.1875rem] tracking-[0rem]">
+              <div class="h-12 w-full relative">
+                <span class="z-[1] absolute top-[-15px] bg-base-content left-3 p-[5px] text-primary text-sm font-bold leading-[1.1875rem] tracking-normal">
                   Newsletter
                 </span>
-                <div class="rounded-[4px] w-full h-full">
+                <div class="rounded w-full h-full">
                   <input
-                    class="h-full border border-[#1d1d1d] rounded-[4px] text-black text-[13px] leading-[1.8125rem] tracking-[0.05rem] bg-[#f0f0f0] outline-none w-full px-[16px] py-[1px]"
+                    class="h-full border border-primary rounded text-black text-[13px] leading-[1.8125rem] tracking-[0.05rem] bg-base-content outline-none w-full px-4 py-[1px]"
                     type="text"
                   />
                 </div>
               </div>
               <div>
-                <button class="min-w-[105px] w-auto h-[48px] rounded-[4px] transition-all duration-[.5s] border-[1.5px] border-white bg-[#1d1d1d] text-white hover:bg-[#666666] hover:text-[#000]">
+                <button class="min-w-[105px] w-auto h-12 rounded transition-all duration-500 border-[1.5px] border-white bg-primary text-white hover:bg-info-content hover:text-secondary">
                   Enviar
                 </button>
               </div>
             </div>
-            <p class="text-[#707070] text-[12px] leading-[1.125rem] tracking-[0.007rem] mt-[14px]">
+            <p class="text-neutral-content text-xs leading-[1.125rem] tracking-[0.007rem] mt-3.5">
               Fique por dentro!<br />Cadastre-se para receber ofertas e
               novidades exclusivas.<br />Ao fornecer o seu e-mail, você concorda
               com a nossa{" "}
@@ -89,8 +89,8 @@ function Footer({
                 Política de Privacidade
               </a>. Você pode se descadastrar a qualquer momento.
             </p>
-            <p class="text-[#707070] text-[12px] leading-[1.125rem] tracking-[0.007rem] mt-[14px]">
-              <span class="text-[#707070] font-bold">
+            <p class="text-neutral-content text-xs leading-[1.125rem] tracking-[0.007rem] mt-3.5">
+              <span class="text-neutral-content font-bold">
                 FIQUE ATENTO ÀS FRAUDES!
               </span>
               <br />O site Underarmour.com.br é o site exclusivo da marca para
@@ -101,7 +101,7 @@ function Footer({
             </p>
             <div>
             </div>
-            <div class="mt-[20px]">
+            <div class="mt-5">
               <a href="https://www.mapmyrun.com/">
                 <Image
                   class=""
@@ -113,13 +113,13 @@ function Footer({
                 />
               </a>
             </div>
-            <div class="mt-[20px]">
-              <p class="text-[#1d1d1d] font-bold text-[18px] leading-[1.75rem] tracking-[0.055rem]">
+            <div class="mt-5">
+              <p class="text-primary font-bold text-lg leading-7 tracking-[0.055rem]">
                 Formas de Pagamento
               </p>
-              <div class="mt-[15px] flex gap-[6px]">
+              <div class="mt-[15px] flex gap-1.5">
                 {paymentMethods?.map((paymentMethod) => (
-                  <div class="p-[3px] h-[27px] w-[45px] bg-white border border-[#1d1d1d] rounded-[4px] flex justify-center items-center">
+                  <div class="p-[3px] h-[27px] w-[45px] bg-white border border-primary rounded flex justify-center items-center">
                     <Image
                       class=""
                       width={45}
@@ -133,8 +133,8 @@ function Footer({
                 ))}
               </div>
             </div>
-            <div class="mt-[20px]">
-              <p class="text-[#707070] text-[11px] leading-[1.125rem] tracking-[0.007rem] ">
+            <div class="mt-5">
+              <p class="text-neutral-content text-[11px] leading-[1.125rem] tracking-[0.007rem] ">
                 © 2024 Under Armour - Todos os direitos reservados. <br />{" "}
                 Vulcabras - SP Comércio de Artigos Esportivos Ltda. CNPJ:
                 18.565.468/0012-41 <br />{" "}
@@ -144,13 +144,13 @@ function Footer({
             </div>
           </div>
           <div>
-            <p class="text-[#1d1d1d] font-bold text-[16px] leading-[1rem] tracking-[0.055rem]">
+            <p class="text-primary font-bold text-base leading-4 tracking-[0.055rem]">
               {helpLinks?.title}
             </p>
-            <ul class="pt-[24px] flex flex-col">
+            <ul class="pt-6 flex flex-col">
               {helpLinks?.children.map((link) => (
                 <a
-                  class="text-black text-[14px] leading-[1.5625rem] tracking-[0.007rem]"
+                  class="text-black text-sm leading-[1.5625rem] tracking-[0.007rem]"
                   href={link.href}
                 >
                   {link.title}
@@ -158,12 +158,12 @@ function Footer({
               ))}
             </ul>
             <div class="mt-[104px]">
-              <p class="text-[#1d1d1d] font-bold text-[18px] leading-[1.75rem] tracking-[0.055rem]">
+              <p class="text-primary font-bold text-lg leading-7 tracking-[0.055rem]">
                 Segurança
               </p>
-              <div class="mt-[15px] flex gap-[6px]">
+              <div class="mt-[15px] flex gap-1.5">
                 {security?.map((paymentMethod) => (
-                  <div class="p-[3px] h-[27px] bg-white border border-[#1d1d1d] rounded-[4px] flex justify-center items-center">
+                  <div class="p-[3px] h-[27px] bg-white border border-primary rounded flex justify-center items-center">
                     <img
                       class=""
                       height={27}
@@ -176,8 +176,8 @@ function Footer({
                 ))}
               </div>
             </div>
-            <div class="mt-[64px] relative">
-              <p class="absolute text-nowrap text-[#000115] text-[13px] leading-[13px] tracking-[-0.015rem]">
+            <div class="mt-16 relative">
+              <p class="absolute text-nowrap text-info text-[13px] leading-[13px] tracking-[-0.015rem]">
                 <b>Telefone:</b>
                 <a href={contactUs?.phone.href}>{contactUs?.phone.text}</a>
                 <b>- E-mail:</b>
@@ -186,13 +186,13 @@ function Footer({
             </div>
           </div>
           <div>
-            <p class="text-[#1d1d1d] font-bold text-[16px] leading-[1rem] tracking-[0.055rem]">
+            <p class="text-primary font-bold text-base leading-4 tracking-[0.055rem]">
               {aboutUsLinks?.title}
             </p>
-            <ul class="pt-[24px] flex flex-col">
+            <ul class="pt-6 flex flex-col">
               {aboutUsLinks?.children.map((link) => (
                 <a
-                  class="text-black text-[14px] leading-[1.5625rem] tracking-[0.007rem]"
+                  class="text-black text-sm leading-[1.5625rem] tracking-[0.007rem]"
                   href={link.href}
                 >
                   {link.title}
@@ -201,15 +201,15 @@ function Footer({
             </ul>
           </div>
           <div>
-            <p class="text-[#1d1d1d] font-bold text-[16px] leading-[1.75rem] tracking-[0.055rem]">
+            <p class="text-primary font-bold text-base leading-7 tracking-[0.055rem]">
               UA Social
             </p>
-            <ul class="pt-[24px] flex flex-col gap-[25px]">
+            <ul class="pt-6 flex flex-col gap-[25px]">
               {social?.map((link) => (
-                <div class="flex gap-[10px]">
+                <div class="flex gap-2.5">
                   <Image width={17} src={link.image} />
                   <a
-                    class="text-black text-[16px] leading-[1.5625rem] tracking-[0.007rem]"
+                    class="text-black text-base leading-[1.5625rem] tracking-[0.007rem]"
                     href={link.href}
                   >
                     {link.text}
@@ -231,24 +231,24 @@ function Footer({
             alt=""
           />
           <div class="flex w-auto items-center gap-[15px]">
-            <div class="h-[48px] w-full relative">
-              <span class="z-[1] absolute top-[-15px] bg-[#f0f0f0] left-[12px] p-[5px] text-[#1d1d1d] text-[14px] font-bold leading-[1.1875rem] tracking-[0rem]">
+            <div class="h-12 w-full relative">
+              <span class="z-[1] absolute top-[-15px] bg-base-content left-3 p-[5px] text-primary text-sm font-bold leading-[1.1875rem] tracking-normal">
                 Newsletter
               </span>
-              <div class="rounded-[4px] w-full h-full">
+              <div class="rounded w-full h-full">
                 <input
-                  class="h-full border border-[#1d1d1d] rounded-[4px] text-black text-[13px] leading-[1.8125rem] tracking-[0.05rem] bg-[#f0f0f0] outline-none w-full px-[16px] py-[1px]"
+                  class="h-full border border-primary rounded text-black text-[13px] leading-[1.8125rem] tracking-[0.05rem] bg-base-content outline-none w-full px-4 py-[1px]"
                   type="text"
                 />
               </div>
             </div>
             <div>
-              <button class="min-w-[105px] w-auto h-[48px] rounded-[4px] transition-all duration-[.5s] border-[1.5px] border-white bg-[#1d1d1d] text-white hover:bg-[#666666] hover:text-[#000]">
+              <button class="min-w-[105px] w-auto h-12 rounded transition-all duration-500 border-[1.5px] border-white bg-primary text-white hover:bg-info-content hover:text-secondary">
                 Enviar
               </button>
             </div>
           </div>
-          <p class="text-[#707070] text-[12px] leading-[1.125rem] tracking-[0.007rem] mt-[14px]">
+          <p class="text-neutral-content text-xs leading-[1.125rem] tracking-[0.007rem] mt-3.5">
             Fique por dentro!<br />Cadastre-se para receber ofertas e novidades
             exclusivas.<br />Ao fornecer o seu e-mail, você concorda com a nossa
             {" "}
@@ -256,8 +256,8 @@ function Footer({
               Política de Privacidade
             </a>. Você pode se descadastrar a qualquer momento.
           </p>
-          <p class="text-[#707070] text-[12px] leading-[1.125rem] tracking-[0.007rem] mt-[14px]">
-            <span class="text-[#707070] font-bold">
+          <p class="text-neutral-content text-xs leading-[1.125rem] tracking-[0.007rem] mt-3.5">
+            <span class="text-neutral-content font-bold">
               FIQUE ATENTO ÀS FRAUDES!
             </span>
             <br />O site Underarmour.com.br é o site exclusivo da marca para
@@ -267,14 +267,14 @@ function Footer({
             oficiais da marca ou pela central de atendimento.
           </p>
           <div>
-            <details class="mt-[12px]">
-              <summary class="flex justify-between items-center font-bold border-t border-[#707070] mb-[20px]">
+            <details class="mt-3">
+              <summary class="flex justify-between text-black items-center font-bold border-t border-neutral-content mb-5">
                 {helpLinks?.title}
               </summary>
               <div class="flex flex-col pl-[23px]">
                 {helpLinks?.children.map((link) => (
                   <a
-                    class="text-black text-[14px] leading-[1.5625rem] tracking-[0.007rem]"
+                    class="text-black text-sm leading-[1.5625rem] tracking-[0.007rem]"
                     href={link.href}
                   >
                     {link.title}
@@ -282,14 +282,14 @@ function Footer({
                 ))}
               </div>
             </details>
-            <details class="mt-[12px]">
-              <summary class="flex justify-between items-center font-bold border-t border-[#707070] mb-[20px]">
+            <details class="mt-3">
+              <summary class="flex justify-between text-black items-center font-bold border-t border-neutral-content mb-5">
                 {aboutUsLinks?.title}
               </summary>
               <div class="flex flex-col pl-[23px]">
                 {aboutUsLinks?.children.map((link) => (
                   <a
-                    class="text-black text-[14px] leading-[1.5625rem] tracking-[0.007rem]"
+                    class="text-black text-sm leading-[1.5625rem] tracking-[0.007rem]"
                     href={link.href}
                   >
                     {link.title}
@@ -297,16 +297,16 @@ function Footer({
                 ))}
               </div>
             </details>
-            <details class="mt-[12px]">
-              <summary class="flex justify-between items-center font-bold border-t border-[#707070] mb-[20px]">
+            <details class="mt-3">
+              <summary class="flex justify-between text-black items-center font-bold border-t border-neutral-content mb-5">
                 UA Social
               </summary>
-              <div class="flex flex-col gap-[10px] pl-[23px]">
+              <div class="flex flex-col gap-2.5 pl-[23px]">
                 {social?.map((link) => (
-                  <div class="flex gap-[10px]">
+                  <div class="flex gap-2.5">
                     <Image width={17} src={link.image} />
                     <a
-                      class="text-black text-[16px] leading-[1.5625rem] tracking-[0.007rem]"
+                      class="text-black text-base leading-[1.5625rem] tracking-[0.007rem]"
                       href={link.href}
                     >
                       {link.text}
@@ -316,7 +316,7 @@ function Footer({
               </div>
             </details>
           </div>
-          <div class="mt-[20px]">
+          <div class="mt-5">
             <a href="https://www.mapmyrun.com/">
               <Image
                 class=""
@@ -328,13 +328,13 @@ function Footer({
               />
             </a>
           </div>
-          <div class="mt-[20px]">
-            <p class="text-[#1d1d1d] font-bold text-[18px] leading-[1.75rem] tracking-[0.055rem]">
+          <div class="mt-5">
+            <p class="text-primary font-bold text-lg leading-7 tracking-[0.055rem]">
               Formas de Pagamento
             </p>
-            <div class="mt-[15px] flex gap-[6px]">
+            <div class="mt-[15px] flex gap-1.5">
               {paymentMethods?.map((paymentMethod) => (
-                <div class="p-[3px] h-[27px] w-[45px] bg-white border border-[#1d1d1d] rounded-[4px] flex justify-center items-center">
+                <div class="p-[3px] h-[27px] w-[45px] bg-white border border-primary rounded flex justify-center items-center">
                   <Image
                     class=""
                     width={45}
@@ -348,13 +348,13 @@ function Footer({
               ))}
             </div>
           </div>
-          <div class="mt-[20px]">
-            <p class="text-[#1d1d1d] font-bold text-[18px] leading-[1.75rem] tracking-[0.055rem]">
+          <div class="mt-5">
+            <p class="text-primary font-bold text-lg leading-7 tracking-[0.055rem]">
               Segurança
             </p>
-            <div class="mt-[15px] flex gap-[6px]">
+            <div class="mt-[15px] flex gap-1.5">
               {security?.map((paymentMethod) => (
-                <div class="p-[3px] h-[27px] bg-white border border-[#1d1d1d] rounded-[4px] flex justify-center items-center">
+                <div class="p-[3px] h-[27px] bg-white border border-primary rounded flex justify-center items-center">
                   <img
                     class=""
                     height={27}
@@ -367,8 +367,8 @@ function Footer({
               ))}
             </div>
           </div>
-          <div class="mt-[64px] relative">
-            <p class="text-nowrap text-center text-[#000115] text-[13px] leading-[13px] tracking-[-0.015rem]">
+          <div class="mt-16 relative">
+            <p class="text-nowrap text-center text-info text-[13px] leading-[13px] tracking-[-0.015rem]">
               <b>Telefone:</b>
               <a href={contactUs?.phone.href}>{contactUs?.phone.text}</a>
               <b>- E-mail:</b>
@@ -376,7 +376,7 @@ function Footer({
             </p>
           </div>
           <div class="my-[25px]">
-            <p class="text-[#707070] text-center text-[11px] leading-[1.125rem] tracking-[0.007rem] ">
+            <p class="text-neutral-content text-center text-[11px] leading-[1.125rem] tracking-[0.007rem] ">
               © 2024 Under Armour - Todos os direitos reservados. <br />{" "}
               Vulcabras - SP Comércio de Artigos Esportivos Ltda. CNPJ:
               18.565.468/0012-41 <br />{" "}

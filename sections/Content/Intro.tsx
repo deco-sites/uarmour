@@ -27,9 +27,7 @@ export default function Intro(
           <h1 class="font-bold text-base-content text-[40px] leading-[120%]">
             {text}
           </h1>
-          {subheading && (
-            <p class="text-base-content text-[18px]">{subheading}</p>
-          )}
+          {subheading && <p class="text-base-content text-lg">{subheading}</p>}
         </div>
       </div>
     </section>
