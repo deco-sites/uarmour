@@ -1,10 +1,1 @@
-{
-  "__resolveType": "site/apps/deco/vtex.ts",
-  "salesChannel": "1",
-  "defaultSegment": {
-    "channelPrivacy": "public"
-  },
-  "platform": "vtex",
-  "account": "underarmourbr",
-  "publicUrl": "www.underarmour.com.br"
-}
+{"__resolveType":"site/apps/deco/vtex.ts","salesChannel":"1","defaultSegment":{"channelPrivacy":"public","channel":"1","currencyCode":"BRL","currencySymbol":"BRL","countryCode":"BRA","cultureInfo":"pt-BR"},"platform":"vtex","account":"underarmourbr","publicUrl":"www.underarmour.com.br"}

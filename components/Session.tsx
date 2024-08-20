@@ -342,12 +342,16 @@ export default function Session(
         id={MINICART_DRAWER_ID}
         class="drawer-end z-50"
         aside={
-          <Drawer.Aside title="My Bag" drawer={MINICART_DRAWER_ID}>
+          <Drawer.Aside
+            title="Sacola"
+            drawer={MINICART_DRAWER_ID}
+            hasTop={false}
+            minicartTop={true}
+          >
             <div
               class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto"
               style={{
-                minWidth: "calc(min(100vw, 425px))",
-                maxWidth: "425px",
+                maxWidth: "500px",
               }}
             >
               <CartProvider cart={minicart!} />
